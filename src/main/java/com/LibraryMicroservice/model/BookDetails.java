@@ -19,12 +19,13 @@ public class BookDetails {
     @Size(min=3, message = "String length is very small")
     private String bookTitle;
     @NotBlank(message = "Genre cant be empty")
-//    @Size(min=3, message = "String length is very small")
+    @Size(min=3, message = "String length is very small")
     private String bookGenre;
     @NotBlank(message = "Author cant be empty")
     @Size(min=3, message = "String length is very small")
     private String author;
 //    @Size(min=2, message = "Price cant be empty")
 //    @NotNull(message= "positive number value is required")
+    @Min(value=1, message="please input some price")
     private int price;
 }
