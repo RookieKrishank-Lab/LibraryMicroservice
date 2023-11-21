@@ -1,4 +1,4 @@
-package com.LibraryMicroservice.exception;
+package com.libraryMicroservice.exception;
 
 public class BookTitleNotFoundException extends RuntimeException{
     public BookTitleNotFoundException(String message) {

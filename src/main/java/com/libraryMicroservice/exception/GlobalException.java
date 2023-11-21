@@ -1,4 +1,4 @@
-package com.LibraryMicroservice.exception;
+package com.libraryMicroservice.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -21,7 +21,7 @@ public class GlobalException {
     }
 
     @ExceptionHandler(BookTitleNotFoundException.class)
-    public ResponseEntity<String> bookNotFoundException(BookTitleNotFoundException ex) {
+    public ResponseEntity<String> bookTitleNotFoundException(BookTitleNotFoundException ex) {
         return new ResponseEntity<>(ex.getMessage(), HttpStatus.NOT_FOUND);
     }
 

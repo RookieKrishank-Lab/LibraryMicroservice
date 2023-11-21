@@ -1,4 +1,4 @@
-package com.LibraryMicroservice.model;
+package com.libraryMicroservice.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -7,7 +7,7 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import javax.validation.constraints.*;
 
-@Data
+@Data                                                                       //equal to getter and setter
 @AllArgsConstructor
 @NoArgsConstructor
 @Document(collection = "LibraryDetails")
@@ -23,9 +23,8 @@ public class BookDetails {
     private String bookGenre;
     @NotBlank(message = "Author cant be empty")
     @Size(min=3, message = "String length is very small")
-    private String author;
-//    @Size(min=2, message = "Price cant be empty")
-//    @NotNull(message= "positive number value is required")
+    private String bookAuthor;
     @Min(value=1, message="please input some price")
     private int price;
+
 }

@@ -1,4 +1,4 @@
-package com.LibraryMicroservice.config;
+package com.libraryMicroservice.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -16,7 +16,7 @@ public class BookConfig {
     public Docket swaggerConfiguration(){
         return new Docket(DocumentationType.SWAGGER_2)
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.LibraryMicroservice"))
+                .apis(RequestHandlerSelectors.basePackage("com.libraryMicroservice"))
                 .paths(PathSelectors.any())
                 .build();
     }

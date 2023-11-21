@@ -1,8 +1,8 @@
-package com.LibraryMicroservice;
+package com.libraryMicroservice;
 
-import com.LibraryMicroservice.model.BookDetails;
-import com.LibraryMicroservice.repository.BookRepository;
-import com.LibraryMicroservice.service.BookService;
+import com.libraryMicroservice.model.BookDetails;
+import com.libraryMicroservice.repository.BookRepository;
+import com.libraryMicroservice.service.BookService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -27,7 +27,7 @@ class LibraryMicroserviceApplicationTests {
 	public void testGetAllBook() {
 		when(bookRepository.findAll()).thenReturn(Stream
 				.of(new BookDetails(203,"Python","TECH","Krishank",23), new BookDetails(292,"Java","TECH","Krishank",232)).collect(Collectors.toList()));
-		assertEquals(2, bookService.findAll().size());      //assertEquals(Object expected, Object actual)
+		assertEquals(2, bookService.findAllBook().size());      //assertEquals(Object expected, Object actual)
 	}
 
 	@Test
